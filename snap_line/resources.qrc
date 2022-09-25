@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/plugins/snap_line" >
+        <file>icons/snap_line_icon.png</file>
+		<file>icons/snap_line_configure_icon.png</file>
+    </qresource>
+</RCC>

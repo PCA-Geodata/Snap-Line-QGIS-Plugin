@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Snap Line
+qgisMinimumVersion=3.0
+description=This plugin snaps a selected line to the closest point of a feature from a defined layer
+version=1.01
+author=Valerio Pinna
+email=vpinna@pre-construct.com
+
+about=This plugin snaps a selected line to the closest points of a feature from a defined layer. It can be used during survey Processing to snap Sections to Archaeological features.
+
+tracker=https://github.com/PCA-Geodata/Snap-Line-QGIS-Plugin/issues
+repository=https://github.com/PCA-Geodata/Snap-Line-QGIS-Plugin
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python, PCA, snapping, digitizing, geometry, line
+
+homepage=https://github.com/PCA-Geodata/Snap-Line-QGIS-Plugin
+category=Plugins
+icon=icons/snap_line_icon.png
+# experimental flag
+experimental=False
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category= Vector
+
+# If the plugin can run on QGIS Server.
+server=False
+
