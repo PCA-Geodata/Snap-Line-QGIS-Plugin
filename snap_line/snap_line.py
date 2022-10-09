@@ -255,11 +255,22 @@ class Snap_Line:
                     #select nearest polygon by id
                     polylayer.select(nearestIds)
 
-                    for feature in polylayer.selectedFeatures():
+
+
+                    # for feature in polylayer.selectedFeatures():   ###old method for segments snapping
+                        # g_poly = feature.geometry()
+                        # calc_new_geom = g_poly.closestSegmentWithContext(old_start_point)
+                        # new_start_geom = calc_new_geom[1]
+                        # sqrDist = calc_new_geom[0]
+                        
+                    for feature in polylayer.selectedFeatures():   ###new method for vertex snapping
                         g_poly = feature.geometry()
-                        calc_new_geom = g_poly.closestSegmentWithContext(old_start_point)
-                        new_start_geom = calc_new_geom[1]
-                        sqrDist = calc_new_geom[0]
+                    
+                        calc_new_geom = g_poly.closestVertex(old_start_point)
+                        new_start_geom = calc_new_geom[0]
+                        sqrDist = calc_new_geom[4]    
+                        
+                        
 
                         real_distance = sqrt(sqrDist)
                         print (real_distance)
@@ -284,11 +295,21 @@ class Snap_Line:
                     #select nearest polygon by id
                     polylayer.select(nearestIds)
 
-                    for feature in polylayer.selectedFeatures():
+                    # for feature in polylayer.selectedFeatures():   ### old method for segments
+                        # g_poly = feature.geometry()
+                        # calc_new_geom = g_poly.closestSegmentWithContext(old_end_point)
+                        # new_end_geom = calc_new_geom[1]
+                        # sqrDist = calc_new_geom[0]
+                        
+                        
+                    for feature in polylayer.selectedFeatures():   ###new method for vertex snapping
                         g_poly = feature.geometry()
-                        calc_new_geom = g_poly.closestSegmentWithContext(old_end_point)
-                        new_end_geom = calc_new_geom[1]
-                        sqrDist = calc_new_geom[0]
+                    
+                        calc_new_geom = g_poly.closestVertex(old_end_point)
+                        new_end_geom = calc_new_geom[0]
+                        sqrDist = calc_new_geom[4]    
+                            
+                        
 
                         real_distance = sqrt(sqrDist)
                         print (real_distance)
